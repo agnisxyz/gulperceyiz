@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gülper Çeyiz ürün detayı">
+    <title>Ürün Detay | Gülper Çeyiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌸</span>
+                <span class="logo-text">Gülper Çeyiz</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Menüyü aç">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                    <li><a href="urunler.html" class="nav-link">Ürünler</a></li>
+                    <li><a href="urunler.html?kategori=banyo" class="nav-link">Banyo Grubu</a></li>
+                    <li><a href="urunler.html?kategori=yatak" class="nav-link">Yatak Odası</a></li>
+                    <li><a href="urunler.html?kategori=ceyiz" class="nav-link">Çeyiz Paketleri</a></li>
+                    <li><a href="index.html#about" class="nav-link">Hakkımızda</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cart-icon" id="cartIcon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Ana Sayfa</a>
+            <span>/</span>
+            <a href="urunler.html">Ürünler</a>
+            <span>/</span>
+            <span id="breadcrumbProduct">Ürün</span>
+        </div>
+    </nav>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-grid">
+                <!-- Product Images -->
+                <div class="product-gallery">
+                    <div class="gallery-main">
+                        <img id="mainImage" src="" alt="Ürün görseli">
+                    </div>
+                    <div class="gallery-thumbs" id="galleryThumbs">
+                        <!-- Thumbnails will be rendered by JS -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-detail-info">
+                    <span class="product-category" id="productCategory">Kategori</span>
+                    <h1 class="product-detail-title" id="productTitle">Ürün Adı</h1>
+
+                    <div class="product-detail-price">
+                        <span class="price-current" id="productPrice">₺0</span>
+                        <span class="price-old" id="productOldPrice">₺0</span>
+                        <span class="price-discount" id="productDiscount">%0 İndirim</span>
+                    </div>
+
+                    <p class="product-detail-desc" id="productDesc">Ürün açıklaması</p>
+
+                    <div class="product-specs">
+                        <h3>Ürün Özellikleri</h3>
+                        <table class="specs-table">
+                            <tr>
+                                <td>Malzeme</td>
+                                <td id="productMaterial">-</td>
+                            </tr>
+                            <tr>
+                                <td>Boyut</td>
+                                <td id="productDimensions">-</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" id="qtyMinus">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="10">
+                            <button class="qty-btn" id="qtyPlus">+</button>
+                        </div>
+                        <button class="btn btn-primary btn-lg" id="addToCartBtn">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="9" cy="21" r="1" />
+                                <circle cx="20" cy="21" r="1" />
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                            </svg>
+                            Sepete Ekle
+                        </button>
+                    </div>
+
+                    <div class="product-trust">
+                        <div class="trust-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="1" y="3" width="15" height="13" />
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                                <circle cx="5.5" cy="18.5" r="2.5" />
+                                <circle cx="18.5" cy="18.5" r="2.5" />
+                            </svg>
+                            <span>Hızlı Kargo</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                <line x1="12" y1="22.08" x2="12" y2="12" />
+                            </svg>
+                            <span>Güvenli Paketleme</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                            <span>Kalite Garantisi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title">Benzer Ürünler</h2>
+            <div class="products-grid" id="relatedProducts">
+                <!-- Related products will be rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Sepetim</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Toplam:</span>
+                <span id="cartTotal">₺0</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Satın Al</a>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🌸</span>
+                        <span class="logo-text">Gülper Çeyiz</span>
+                    </a>
+                    <p class="footer-desc">Uzun yıllardır ailelerle birlikte, kaliteli ev tekstili ürünleriyle
+                        hizmetinizdeyiz.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Kategoriler</h4>
+                    <ul>
+                        <li><a href="urunler.html?kategori=banyo">Banyo Grubu</a></li>
+                        <li><a href="urunler.html?kategori=yatak">Yatak Odası</a></li>
+                        <li><a href="urunler.html?kategori=ceyiz">Çeyiz Paketleri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Bilgi</h4>
+                    <ul>
+                        <li><a href="index.html#about">Hakkımızda</a></li>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">Kargo Bilgileri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>İletişim</h4>
+                    <address>
+                        <p>📞 <a href="tel:+902121234567">0212 123 45 67</a></p>
+                        <p>✉️ <a href="mailto:info@gulperceyiz.com">info@gulperceyiz.com</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gülper Çeyiz. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        // Product Detail Page Logic
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            if (!productId) {
+                window.location.href = 'urunler.html';
+                return;
+            }
+
+            const product = getProductById(productId);
+
+            if (!product) {
+                window.location.href = 'urunler.html';
+                return;
+            }
+
+            // Update page title
+            document.title = product.name + ' | Gülper Çeyiz';
+
+            // Update breadcrumb
+            document.getElementById('breadcrumbProduct').textContent = product.name;
+
+            // Update main image
+            document.getElementById('mainImage').src = product.image;
+            document.getElementById('mainImage').alt = product.name;
+
+            // Category display
+            const categoryNames = {
+                'banyo': 'Banyo Grubu',
+                'yatak': 'Yatak Odası',
+                'ceyiz': 'Çeyiz Paketleri'
+            };
+            document.getElementById('productCategory').textContent = categoryNames[product.category] || product.category;
+
+            // Product info
+            document.getElementById('productTitle').textContent = product.name;
+            document.getElementById('productPrice').textContent = '₺' + product.price;
+
+            if (product.oldPrice) {
+                document.getElementById('productOldPrice').textContent = '₺' + product.oldPrice;
+                const discount = Math.round((1 - product.price / product.oldPrice) * 100);
+                document.getElementById('productDiscount').textContent = '%' + discount + ' İndirim';
+            } else {
+                document.getElementById('productOldPrice').style.display = 'none';
+                document.getElementById('productDiscount').style.display = 'none';
+            }
+
+            document.getElementById('productDesc').textContent = product.details || product.description;
+            document.getElementById('productMaterial').textContent = product.material || '-';
+            document.getElementById('productDimensions').textContent = product.dimensions || '-';
+
+            // Quantity controls
+            const qtyInput = document.getElementById('quantity');
+            document.getElementById('qtyMinus').addEventListener('click', () => {
+                if (qtyInput.value > 1) qtyInput.value = parseInt(qtyInput.value) - 1;
+            });
+            document.getElementById('qtyPlus').addEventListener('click', () => {
+                if (qtyInput.value < 10) qtyInput.value = parseInt(qtyInput.value) + 1;
+            });
+
+            // Add to cart
+            document.getElementById('addToCartBtn').addEventListener('click', () => {
+                const qty = parseInt(qtyInput.value) || 1;
+                addToCart(product.id, qty);
+            });
+
+            // Related products (same category, excluding current)
+            const related = products
+                .filter(p => p.category === product.category && p.id !== product.id)
+                .slice(0, 4);
+
+            const relatedGrid = document.getElementById('relatedProducts');
+            relatedGrid.innerHTML = related.map(p => `
+                <article class="product-card">
+                    <a href="urun-detay.html?id=${p.id}" class="product-image">
+                        <img src="${p.image}" alt="${p.name}">
+                    </a>
+                    <div class="product-info">
+                        <a href="urun-detay.html?id=${p.id}">
+                            <h3 class="product-title">${p.name}</h3>
+                        </a>
+                        <div class="product-price">
+                            <span class="price-current">₺${p.price}</span>
+                            ${p.oldPrice ? `<span class="price-old">₺${p.oldPrice}</span>` : ''}
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        });
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gülper Çeyiz ürünleri - Havlu, bornoz, nevresim ve çeyiz setleri uygun fiyatlarla.">
+    <title>Ürünler | Gülper Çeyiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌸</span>
+                <span class="logo-text">Gülper Çeyiz</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Menüyü aç">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                    <li><a href="urunler.html" class="nav-link active">Ürünler</a></li>
+                    <li><a href="urunler.html?kategori=banyo" class="nav-link">Banyo Grubu</a></li>
+                    <li><a href="urunler.html?kategori=yatak" class="nav-link">Yatak Odası</a></li>
+                    <li><a href="urunler.html?kategori=ceyiz" class="nav-link">Çeyiz Paketleri</a></li>
+                    <li><a href="index.html#about" class="nav-link">Hakkımızda</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cart-icon" id="cartIcon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Ürünlerimiz</h1>
+            <p class="page-subtitle">Kaliteli ev tekstili ürünlerini keşfedin</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-page">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <div class="filter-section">
+                        <h3 class="filter-title">Kategoriler</h3>
+                        <ul class="filter-list">
+                            <li>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="kategori" value="all" checked>
+                                    <span>Tüm Ürünler</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="kategori" value="banyo">
+                                    <span>Banyo Grubu</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="kategori" value="yatak">
+                                    <span>Yatak Odası</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="kategori" value="ceyiz">
+                                    <span>Çeyiz Paketleri</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3 class="filter-title">Fiyat Aralığı</h3>
+                        <div class="price-range">
+                            <input type="range" id="priceRange" min="0" max="2000" value="2000" class="price-slider">
+                            <div class="price-labels">
+                                <span>₺0</span>
+                                <span id="priceValue">₺2000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3 class="filter-title">Sıralama</h3>
+                        <select id="sortSelect" class="sort-select">
+                            <option value="popular">Popülerlik</option>
+                            <option value="price-low">Fiyat: Düşükten Yükseğe</option>
+                            <option value="price-high">Fiyat: Yüksekten Düşüğe</option>
+                            <option value="name">İsme Göre</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary filter-apply" id="applyFilters">Filtrele</button>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="products-content">
+                    <div class="products-header">
+                        <span class="products-count"><span id="productCount">12</span> ürün bulundu</span>
+                    </div>
+
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be rendered by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Sepetim</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be rendered by JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Toplam:</span>
+                <span id="cartTotal">₺0</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Satın Al</a>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🌸</span>
+                        <span class="logo-text">Gülper Çeyiz</span>
+                    </a>
+                    <p class="footer-desc">Uzun yıllardır ailelerle birlikte, kaliteli ev tekstili ürünleriyle
+                        hizmetinizdeyiz.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="18" cy="6" r="1" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Kategoriler</h4>
+                    <ul>
+                        <li><a href="urunler.html?kategori=banyo">Banyo Grubu</a></li>
+                        <li><a href="urunler.html?kategori=yatak">Yatak Odası</a></li>
+                        <li><a href="urunler.html?kategori=ceyiz">Çeyiz Paketleri</a></li>
+                        <li><a href="urunler.html">Tüm Ürünler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Bilgi</h4>
+                    <ul>
+                        <li><a href="index.html#about">Hakkımızda</a></li>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">Kargo Bilgileri</a></li>
+                        <li><a href="#">İade Koşulları</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>İletişim</h4>
+                    <address>
+                        <p>📍 Örnek Mahallesi, Tekstil Caddesi No:35<br>İstanbul, Türkiye</p>
+                        <p>📞 <a href="tel:+902121234567">0212 123 45 67</a></p>
+                        <p>✉️ <a href="mailto:info@gulperceyiz.com">info@gulperceyiz.com</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gülper Çeyiz. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
