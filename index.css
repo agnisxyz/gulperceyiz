@@ -406,10 +406,9 @@ ol {
 
 .product-image {
     position: relative;
-    aspect-ratio: 1;
+    height: 160px;
     overflow: hidden;
     background: var(--color-cream);
-    max-height: 180px;
 }
 
 .product-image img {
@@ -905,7 +904,7 @@ ol {
     }
 
     .product-image {
-        max-height: 150px;
+        height: 130px;
     }
 
     .hero {
@@ -935,7 +934,7 @@ ol {
     }
 
     .product-image {
-        max-height: 120px;
+        height: 100px;
     }
 
     .product-title {
