@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gülper Çeyiz - Sıkça Sorulan Sorular. Kargo, iade, ödeme ve ürünler hakkında merak ettikleriniz.">
+    <title>Sıkça Sorulan Sorular | Gülper Çeyiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌸</span>
+                <span class="logo-text">Gülper Çeyiz</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Menüyü aç">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                    <li><a href="urunler.html" class="nav-link">Ürünler</a></li>
+                    <li><a href="urunler.html?kategori=banyo" class="nav-link">Banyo Grubu</a></li>
+                    <li><a href="urunler.html?kategori=yatak" class="nav-link">Yatak Odası</a></li>
+                    <li><a href="urunler.html?kategori=ceyiz" class="nav-link">Çeyiz Paketleri</a></li>
+                    <li><a href="sss.html" class="nav-link active">SSS</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cart-icon" id="cartIcon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Sıkça Sorulan Sorular</h1>
+            <p class="page-subtitle">Merak ettiğiniz her şeyin cevabı burada</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <!-- FAQ Categories -->
+            <div class="faq-categories">
+                <button class="faq-category-btn active" data-category="all">Tümü</button>
+                <button class="faq-category-btn" data-category="kargo">🚚 Kargo</button>
+                <button class="faq-category-btn" data-category="iade">↩️ İade</button>
+                <button class="faq-category-btn" data-category="odeme">💳 Ödeme</button>
+                <button class="faq-category-btn" data-category="urun">📦 Ürünler</button>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="faq-list">
+                <!-- Kargo -->
+                <div class="faq-item" data-category="kargo">
+                    <button class="faq-question">
+                        <span>Kargo ücreti ne kadar?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>500 TL ve üzeri siparişlerde kargo <strong>tamamen ücretsizdir</strong>. 500 TL altındaki
+                            siparişlerde kargo ücreti sadece 49 TL'dir.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="kargo">
+                    <button class="faq-question">
+                        <span>Siparişim ne zaman teslim edilir?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Siparişler genellikle aynı gün kargoya verilir ve <strong>2-3 iş günü</strong> içinde
+                            adresinize teslim edilir. İstanbul içi teslimatlar 1-2 gün içinde gerçekleşir.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="kargo">
+                    <button class="faq-question">
+                        <span>Kargo takibi yapabilir miyim?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Evet! Siparişiniz kargoya verildiğinde size SMS ve e-posta ile takip numarası gönderilir. Bu
+                            numara ile kargo firmasının sitesinden takip yapabilirsiniz.</p>
+                    </div>
+                </div>
+
+                <!-- İade -->
+                <div class="faq-item" data-category="iade">
+                    <button class="faq-question">
+                        <span>İade koşulları nelerdir?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ürünlerimizi <strong>14 gün içinde</strong> iade edebilirsiniz. İade edilecek ürünlerin:</p>
+                        <ul>
+                            <li>Kullanılmamış ve yıkanmamış olması</li>
+                            <li>Orijinal ambalajında olması</li>
+                            <li>Etiketlerinin sökülmemiş olması</li>
+                        </ul>
+                        <p>gerekmektedir.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="iade">
+                    <button class="faq-question">
+                        <span>İade kargo ücreti kime ait?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ürün ayıplı/kusurlu ise iade kargo ücreti <strong>bize aittir</strong>. Cayma hakkı
+                            kapsamındaki iadelerde kargo ücreti müşteriye aittir.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="iade">
+                    <button class="faq-question">
+                        <span>İade işlemi ne kadar sürer?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>İade ürün bize ulaştıktan sonra <strong>3 iş günü</strong> içinde kontrol edilir. Onay
+                            sonrası ödemeniz 5-7 iş günü içinde iade edilir.</p>
+                    </div>
+                </div>
+
+                <!-- Ödeme -->
+                <div class="faq-item" data-category="odeme">
+                    <button class="faq-question">
+                        <span>Hangi ödeme yöntemlerini kabul ediyorsunuz?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Şu ödeme yöntemlerini kabul ediyoruz:</p>
+                        <ul>
+                            <li>💵 Kapıda ödeme (Nakit veya Kredi Kartı)</li>
+                            <li>🏦 Havale / EFT</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="odeme">
+                    <button class="faq-question">
+                        <span>Kapıda ödeme güvenli mi?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Evet, tamamen güvenlidir. Kapıda ödeme seçeneğinde nakit veya kredi/banka kartı ile ödeme
+                            yapabilirsiniz. Kargo görevlisi size POS cihazı ile ödeme imkanı sunar.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="odeme">
+                    <button class="faq-question">
+                        <span>İndirim kodu nasıl kullanılır?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sipariş sayfasında "İndirim Kodu" alanına kodunuzu girin ve "Uygula" butonuna tıklayın.
+                            İndirim otomatik olarak toplam tutarınızdan düşecektir.</p>
+                        <p><strong>Yeni üyelere özel:</strong> HOSGELDIN kodu ile %10 indirim kazanın!</p>
+                    </div>
+                </div>
+
+                <!-- Ürünler -->
+                <div class="faq-item" data-category="urun">
+                    <button class="faq-question">
+                        <span>Ürünler orijinal mi?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Evet, tüm ürünlerimiz <strong>%100 orijinal ve kalite garantili</strong>dir. Uzun yıllardır
+                            güvenilir tedarikçilerimizden temin ettiğimiz ürünleri sizlere sunuyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="urun">
+                    <button class="faq-question">
+                        <span>Ürünlerin bakım talimatları var mı?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Her ürünümüz bakım talimatlarını içeren etiketle birlikte gönderilir. Genel olarak:</p>
+                        <ul>
+                            <li>Havlu ve bornozları 40°C'de yıkayın</li>
+                            <li>Nevresim takımlarını ters çevirerek yıkayın</li>
+                            <li>Yumuşatıcı kullanırken dikkatli olun</li>
+                            <li>Düşük ısıda ütüleyin</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="urun">
+                    <button class="faq-question">
+                        <span>Toptan satış yapıyor musunuz?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Evet, toptan satış da yapmaktayız. Toptan fiyatlar ve minimum sipariş miktarları için bizimle
+                            <strong>WhatsApp</strong> veya telefon üzerinden iletişime geçebilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact CTA -->
+            <div class="faq-contact">
+                <h3>Sorunuz mu var?</h3>
+                <p>Aradığınız cevabı bulamadıysanız, bize ulaşmaktan çekinmeyin!</p>
+                <div class="faq-contact-buttons">
+                    <a href="tel:+902121234567" class="btn btn-primary">
+                        📞 Bizi Arayın
+                    </a>
+                    <a href="https://wa.me/902121234567" class="btn btn-outline" target="_blank">
+                        💬 WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Sepetim</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Toplam:</span>
+                <span id="cartTotal">₺0</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Satın Al</a>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🌸</span>
+                        <span class="logo-text">Gülper Çeyiz</span>
+                    </a>
+                    <p class="footer-desc">Uzun yıllardır ailelerle birlikte, kaliteli ev tekstili ürünleriyle
+                        hizmetinizdeyiz.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="18" cy="6" r="1" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Kategoriler</h4>
+                    <ul>
+                        <li><a href="urunler.html?kategori=banyo">Banyo Grubu</a></li>
+                        <li><a href="urunler.html?kategori=yatak">Yatak Odası</a></li>
+                        <li><a href="urunler.html?kategori=ceyiz">Çeyiz Paketleri</a></li>
+                        <li><a href="urunler.html">Tüm Ürünler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Bilgi</h4>
+                    <ul>
+                        <li><a href="index.html#about">Hakkımızda</a></li>
+                        <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+                        <li><a href="sss.html">Kargo Bilgileri</a></li>
+                        <li><a href="sss.html">İade Koşulları</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>İletişim</h4>
+                    <address>
+                        <p>📍 Pendik, İstanbul</p>
+                        <p>📞 <a href="tel:+902121234567">0212 123 45 67</a></p>
+                        <p>✉️ <a href="mailto:info@gulperceyiz.com">info@gulperceyiz.com</a></p>
+                    </address>
+                    <div class="footer-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48246.95614652611!2d29.21!3d40.88!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7b7b7b7b7b7%3A0x0!2sPendik%2C%20Istanbul!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
+                            width="100%" height="180" style="border:0; border-radius: 12px; margin-top: 1rem;"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Gülper Çeyiz Konum">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gülper Çeyiz. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function () {
+            // FAQ Item Toggle
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function () {
+                    const item = this.parentElement;
+                    const isOpen = item.classList.contains('open');
+
+                    // Close all other items
+                    document.querySelectorAll('.faq-item.open').forEach(openItem => {
+                        if (openItem !== item) {
+                            openItem.classList.remove('open');
+                        }
+                    });
+
+                    // Toggle current item
+                    item.classList.toggle('open');
+                });
+            });
+
+            // Category Filter
+            const categoryBtns = document.querySelectorAll('.faq-category-btn');
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const category = this.dataset.category;
+
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter items
+                    faqItems.forEach(item => {
+                        if (category === 'all' || item.dataset.category === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
